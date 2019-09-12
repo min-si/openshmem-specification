@@ -386,6 +386,18 @@ internally avoid the later synchronization made by the other model when no
 subsequent operation is issued between these two synchronization calls.
 }
 
+\subsection{Access Symmetric Data Objects}
+\label{subsec:interoperability:symm_access}
+
+A hybrid program can make MPI calls to access the memory location of symmetric
+data objects created in the \openshmem environment. The memory synchronization
+requirement of MPI point-to-point communication and collectives are the same as
+that of local memory load\slash store. Therefore, additional \openshmem synchronization
+calls are required to ensure any remote update by RMA or AMO operations becomes
+visible to MPI communication calls.
+
+
+
 \subsection{Communication Progress}
 \label{subsec:interoperability:progress}
 
