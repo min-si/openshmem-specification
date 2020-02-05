@@ -32,15 +32,7 @@ int @\FuncDecl{shmem\_addr\_accessible}@(const void *addr, int pe);
 }
 
 \apinotes{
-    This routine may be particularly useful for hybrid programming with other
-    communication libraries (such as \ac{MPI}) or parallel languages.  For
-    example, when an \ac{MPI} job uses \ac{MPMD} mode, multiple executable
-    \ac{MPI} programs may use \openshmem routines.  In such cases, static
-    memory, such as a \Cstd global variable, is
-    symmetric between processes running from the same executable file, but is
-    not symmetric between processes running from different executable files.
-    Data allocated from the symmetric heap (e.g., using \FUNC{shmem\_malloc})
-    is symmetric across the same or different executable files.
+    None.
 }
 
 \end{apidefinition}
